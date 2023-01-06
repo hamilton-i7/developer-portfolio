@@ -7,6 +7,24 @@ import Button from '../common/button'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 
+const PatternRings = () => {
+  return (
+    <Box
+      sx={{
+        position: 'absolute',
+        width: '53rem',
+        height: '12.9rem',
+        right: '-34.2rem',
+        top: '-6.5rem',
+        background: 'no-repeat url(/pattern-rings.svg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        zIndex: 0,
+      }}
+    />
+  )
+}
+
 const Project = ({ project }: { project: IProject }) => {
   return (
     <Stack>
@@ -41,7 +59,9 @@ const Projects = () => {
       component='main'
       sx={{
         padding: '8rem 1.6rem',
+        position: 'relative',
       }}>
+      <PatternRings />
       <Stack
         direction='row'
         sx={{

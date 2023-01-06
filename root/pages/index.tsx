@@ -29,7 +29,14 @@ export default function Home() {
           position: 'relative',
           color: theme => theme.palette.common.white,
         }}>
-        <Navbar />
+        <Navbar
+          sx={{
+            position: 'absolute',
+            top: '2rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+          }}
+        />
         <Hero />
         <Technologies />
         <Projects />

@@ -1,10 +1,10 @@
-import Stack from '@mui/material/Stack'
+import Stack, { StackProps } from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import Link from './link'
 import Box from '@mui/material/Box'
 
-const Navbar = () => {
+const Navbar = ({ sx }: StackProps) => {
   const navbarLinks = [
     { imgSrc: '/icon-github.svg', alt: 'Github icon' },
     { imgSrc: '/icon-frontend-mentor.svg', alt: 'Frontend Mentor icon' },
@@ -16,12 +16,9 @@ const Navbar = () => {
     <Stack
       component='nav'
       sx={{
-        position: 'absolute',
-        top: '2rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
         alignItems: 'center',
         zIndex: 1_000,
+        ...sx,
       }}>
       <Link href='#'>
         <Typography variant='h3' component='p'>
