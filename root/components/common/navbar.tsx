@@ -2,18 +2,14 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import Link from './link'
-import Image from 'next/image'
-import githubIcon from '../../public/icon-github.svg'
-import frontendMentorIcon from '../../public/icon-frontend-mentor.svg'
-import linkedInIcon from '../../public/icon-linkedin.svg'
-import twitterIcon from '../../public/icon-twitter.svg'
+import Box from '@mui/material/Box'
 
 const Navbar = () => {
   const navbarLinks = [
-    { imgSrc: githubIcon, alt: 'Github icon' },
-    { imgSrc: frontendMentorIcon, alt: 'Frontend Mentor icon' },
-    { imgSrc: linkedInIcon, alt: 'LinkedIn icon' },
-    { imgSrc: twitterIcon, alt: 'Twitter icon' },
+    { imgSrc: '/icon-github.svg', alt: 'Github icon' },
+    { imgSrc: '/icon-frontend-mentor.svg', alt: 'Frontend Mentor icon' },
+    { imgSrc: '/icon-linkedin.svg', alt: 'LinkedIn icon' },
+    { imgSrc: '/icon-twitter.svg', alt: 'Twitter icon' },
   ]
 
   return (
@@ -21,23 +17,22 @@ const Navbar = () => {
       component='nav'
       sx={{
         position: 'absolute',
-        top: 0,
-        left: 0,
+        top: '2rem',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        alignItems: 'center',
+        zIndex: 1_000,
       }}>
       <Link href='#'>
         <Typography variant='h3' component='p'>
           adamkeyes
         </Typography>
       </Link>
-      <Stack direction='row'>
+      <Stack direction='row' spacing={3} sx={{ mt: '2rem' }}>
         {navbarLinks.map((link, index) => (
-          <Image
-            key={index}
-            src={link.imgSrc}
-            alt={link.alt}
-            width={24}
-            height={24}
-          />
+          <Link href='#' key={index}>
+            <Box component='img' src={link.imgSrc} alt={link.alt} />
+          </Link>
         ))}
       </Stack>
     </Stack>
