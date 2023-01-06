@@ -1,0 +1,60 @@
+{
+  "technologies": [
+    { "name": "HTML", "experience": "4 years experience" },
+    { "name": "CSS", "experience": "4 years experience" },
+    { "name": "Javascript", "experience": "4 years experience" },
+    { "name": "Accessibility", "experience": "4 years experience" },
+    { "name": "React", "experience": "3 years experience" },
+    { "name": "Sass", "experience": "3 years experience" }
+  ],
+  "projects": [
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-1-small.webp",
+        "large": "/thumbnail-project-1-large.webp"
+      },
+      "name": "Design Portfolio",
+      "technologies": ["HTML", "CSS"]
+    },
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-2-small.webp",
+        "large": "/thumbnail-project-2-large.webp"
+      },
+      "name": "E-Learning Landing Page",
+      "technologies": ["HTML", "CSS"]
+    },
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-3-small.webp",
+        "large": "/thumbnail-project-3-large.webp"
+      },
+      "name": "Todo Web App",
+      "technologies": ["HTML", "CSS", "Javascript"]
+    },
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-4-small.webp",
+        "large": "/thumbnail-project-4-large.webp"
+      },
+      "name": "Entertainment Web App",
+      "technologies": ["HTML", "CSS", "Javascript"]
+    },
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-5-small.webp",
+        "large": "/thumbnail-project-5-large.webp"
+      },
+      "name": "Memory Game",
+      "technologies": ["HTML", "CSS", "Javascript"]
+    },
+    {
+      "imgSrc": {
+        "small": "/thumbnail-project-6-small.webp",
+        "large": "/thumbnail-project-6-large.webp"
+      },
+      "name": "Art Gallery Showcase",
+      "technologies": ["HTML", "CSS", "Javascript"]
+    }
+  ]
+}
