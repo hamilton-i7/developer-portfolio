@@ -1,6 +1,7 @@
-import Divider from '@mui/material/Divider'
+import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Head from 'next/head'
+import Divider from '../components/common/divider'
 import Navbar from '../components/common/navbar'
 import Contact from '../components/home/contact'
 import Hero from '../components/home/hero'
@@ -19,24 +20,21 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon-32x32.png' />
       </Head>
-      <Stack
+      <Box
         sx={{
           background: theme => theme.palette.common.black,
           minHeight: '100vh',
           width: '100%',
-          alignItems: 'center',
           overflowX: 'hidden',
           position: 'relative',
           color: theme => theme.palette.common.white,
         }}>
         <Navbar />
         <Hero />
-        <Divider />
         <Technologies />
-        <Divider />
         <Projects />
         <Contact />
-      </Stack>
+      </Box>
     </>
   )
 }

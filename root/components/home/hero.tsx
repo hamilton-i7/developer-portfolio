@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import Button from '../common/button'
+import Divider from '../common/divider'
 
 const PatternRings = () => {
   return (
@@ -42,7 +43,7 @@ const PatternCircle = () => {
 const Hero = () => {
   return (
     <Stack
-      component='section'
+      component='header'
       sx={{
         alignItems: 'center',
         textAlign: 'center',
