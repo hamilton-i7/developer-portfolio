@@ -1,4 +1,4 @@
-import { PaletteOptions } from '@mui/material/styles/createPalette'
+import { PaletteOptions, Palette } from '@mui/material/styles/createPalette'
 
 declare module '@mui/material/styles' {
   interface BreakpointOverrides {
@@ -14,6 +14,13 @@ declare module '@mui/material/styles' {
 }
 
 declare module '@mui/material/styles/createPalette' {
+  export interface Palette {
+    neutral: {
+      main: string
+      dark: string
+    }
+  }
+
   export interface PaletteOptions {
     neutral: {
       main: string

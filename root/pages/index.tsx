@@ -1,5 +1,11 @@
+import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import Head from 'next/head'
+import Navbar from '../components/common/navbar'
+import Contact from '../components/home/contact'
+import Hero from '../components/home/hero'
+import Projects from '../components/home/projects'
+import Technologies from '../components/home/technologies'
 
 export default function Home() {
   return (
@@ -18,7 +24,16 @@ export default function Home() {
           background: theme => theme.palette.common.black,
           minHeight: '100vh',
           width: '100%',
-        }}></Stack>
+          alignItems: 'center',
+        }}>
+        <Navbar />
+        <Hero />
+        <Divider />
+        <Technologies />
+        <Divider />
+        <Projects />
+        <Contact />
+      </Stack>
     </>
   )
 }
