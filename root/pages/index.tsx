@@ -25,6 +25,9 @@ export default function Home() {
           minHeight: '100vh',
           width: '100%',
           alignItems: 'center',
+          overflowX: 'hidden',
+          position: 'relative',
+          color: theme => theme.palette.common.white,
         }}>
         <Navbar />
         <Hero />

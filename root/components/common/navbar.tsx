@@ -17,7 +17,13 @@ const Navbar = () => {
   ]
 
   return (
-    <Stack>
+    <Stack
+      component='nav'
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+      }}>
       <Link href='#'>
         <Typography variant='h3' component='p'>
           adamkeyes
