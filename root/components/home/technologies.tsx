@@ -18,18 +18,19 @@ const Technologies = () => {
 
   return (
     <Box
-      sx={{ padding: { xs: '0 1.6rem', sm: '0 3.2rem' } }}
+      sx={{ padding: { xs: '0 1.6rem', sm: '0 3.2rem', lg: '0 12rem' } }}
       component='section'>
       <Divider />
       <Grid
         container
-        spacing={3}
+        columnSpacing={{ xs: 3 }}
+        rowSpacing={{ xs: 3, sm: 7.25 }}
         sx={{
           textAlign: { xs: 'center', sm: 'left' },
-          padding: { xs: '4rem 0', sm: '6rem 0 0' },
+          padding: { xs: '4rem 0', sm: '6rem 0 0', lg: '7.2rem 0 0' },
         }}>
         {technologies.map((technology, index) => (
-          <Grid key={index} item xs={12} sm={6}>
+          <Grid key={index} item xs={12} sm={6} lg={4}>
             <Stack>
               <Typography variant='h2' component='h3'>
                 {technology.name}

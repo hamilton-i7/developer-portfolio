@@ -3,12 +3,20 @@ import MuiButton, { ButtonProps as MuiButtonProps } from '@mui/material/Button'
 
 type ButtonProps = MuiButtonProps & {
   children: React.ReactNode
+  component?: React.ElementType
 }
 
-const Button = ({ children, variant = 'text', sx, ...props }: ButtonProps) => {
+const Button = ({
+  children,
+  variant = 'text',
+  component = 'button',
+  sx,
+  ...props
+}: ButtonProps) => {
   return (
     <MuiButton
       variant={variant}
+      component={component}
       sx={{
         padding: 0,
         color: theme => theme.palette.common.white,

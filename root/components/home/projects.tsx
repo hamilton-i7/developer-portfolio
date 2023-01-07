@@ -7,7 +7,11 @@ import Button from '../common/button'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import { useTheme } from '@mui/material'
-import { useSmallScreenMatcher } from '../../utils/responsive'
+import {
+  useLargeScreenMatcher,
+  useSmallScreenMatcher,
+} from '../../utils/responsive'
+import ImageButton from '../common/image-button'
 
 const PatternRings = () => {
   return (
@@ -16,7 +20,7 @@ const PatternRings = () => {
         position: 'absolute',
         width: '53rem',
         height: '12.9rem',
-        right: '-34.2rem',
+        right: { xs: '-34.2rem', lg: '-26.2rem' },
         top: '-6.5rem',
         background: 'no-repeat url(/pattern-rings.svg)',
         backgroundSize: 'cover',
@@ -29,7 +33,7 @@ const PatternRings = () => {
 
 type ProjectProps = {
   project: IProject
-  useLargeImage: boolean
+  useLargeImage?: boolean
 }
 
 const Project = ({ project, useLargeImage }: ProjectProps) => {
@@ -57,18 +61,38 @@ const Project = ({ project, useLargeImage }: ProjectProps) => {
   )
 }
 
+const ProjectDesktop = ({ project }: ProjectProps) => {
+  return (
+    <Stack>
+      <ImageButton img={project.imgSrc.large} />
+      <Typography
+        variant='h4'
+        component='h3'
+        sx={{ mb: { xs: '2rem', lg: '0.7rem' }, mt: { lg: '2rem' } }}>
+        {project.name}
+      </Typography>
+      <Stack direction='row' spacing={2.25} sx={{ mb: '2rem' }}>
+        {project.technologies.map((technology, index) => (
+          <Typography key={index}>{technology}</Typography>
+        ))}
+      </Stack>
+    </Stack>
+  )
+}
+
 const Projects = () => {
   const { projects }: { projects: IProject[] } = JSON.parse(
     JSON.stringify(collections),
   )
   const theme = useTheme()
   const matchesSmallScreen = useSmallScreenMatcher(theme)
+  const matchesLargeScreen = useLargeScreenMatcher(theme)
 
   return (
     <Stack
       component='main'
       sx={{
-        padding: { xs: '8rem 1.6rem', sm: '10rem 3.2rem' },
+        padding: { xs: '8rem 1.6rem', sm: '10rem 3.2rem', lg: '14rem 12rem' },
         position: 'relative',
       }}>
       <PatternRings />
@@ -86,11 +110,15 @@ const Projects = () => {
       </Stack>
       <Grid
         container
-        columnSpacing={{ xs: 5, tablet: 3 }}
-        rowSpacing={{ xs: 5, tablet: 7.5 }}>
+        columnSpacing={{ xs: 5, tablet: 3, lg: 3.75 }}
+        rowSpacing={{ xs: 5, tablet: 7.5, lg: 8.75 }}>
         {projects.map((project, index) => (
           <Grid key={index} item xs={12} tablet={6}>
-            <Project project={project} useLargeImage={matchesSmallScreen} />
+            {matchesLargeScreen ? (
+              <ProjectDesktop project={project} />
+            ) : (
+              <Project project={project} useLargeImage={matchesSmallScreen} />
+            )}
           </Grid>
         ))}
       </Grid>
