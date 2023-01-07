@@ -18,7 +18,7 @@ const PatternRings = () => {
         width: '53rem',
         height: '12.9rem',
         left: { xs: '-34.2rem', lg: '-10rem' },
-        top: { xs: '13rem', sm: '8.6rem', lg: '13.3rem' },
+        top: { xs: '13rem', sm: '8.6rem', lg: '13.3rem', desktop: '13rem' },
         background: 'no-repeat url(/pattern-rings.svg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -35,9 +35,8 @@ const PatternCircle = () => {
         position: 'absolute',
         width: '12.9rem',
         height: '12.9rem',
-        right: { xs: '-7rem', lg: 0 },
-        left: { lg: '68rem' },
-        top: { xs: '25rem', sm: '31.5rem', lg: '36rem' },
+        right: { xs: '-7rem', lg: '40rem', desktop: '54.5rem' },
+        top: { xs: '25rem', sm: '31.5rem', lg: '36rem', desktop: '51rem' },
         background: 'no-repeat url(/pattern-circle.svg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -54,7 +53,7 @@ const Heading = () => {
 
   const text = matchesLargeScreen ? (
     <>
-      Nice to meet you
+      Nice to meet you!
       <br />
       I'm{' '}
       <Box
@@ -64,7 +63,7 @@ const Heading = () => {
           '::after': {
             content: "''",
             height: '0.4rem',
-            width: { xs: '22.5rem', sm: '40.2rem' },
+            width: { xs: '22.5rem', sm: '40.2rem', desktop: '49.2rem' },
             background: theme => theme.palette.primary.main,
             position: 'absolute',
             bottom: '0.25rem',
@@ -123,7 +122,7 @@ const Heading = () => {
       variant='h1'
       sx={{
         mb: { xs: '2.4rem', sm: '6rem', lg: '4.2rem' },
-        mt: { sm: '15rem' },
+        mt: { sm: '15rem', desktop: '19.8rem' },
       }}>
       {text}
     </Typography>
@@ -141,7 +140,12 @@ const Hero = () => {
       sx={{
         alignItems: { xs: 'center', sm: 'start' },
         textAlign: { xs: 'center', sm: 'left' },
-        padding: { xs: '0 1.6rem', sm: '0 3.2rem', lg: '0 12rem' },
+        padding: {
+          xs: '0 1.6rem',
+          sm: '0 3.2rem',
+          lg: '0 12rem',
+          desktop: '0 16.5rem',
+        },
         overflowX: 'hidden',
       }}>
       <PatternRings />
@@ -167,7 +171,7 @@ const Hero = () => {
           mb: { xs: '4rem', sm: 0 },
           zIndex: 1,
           position: { sm: 'absolute' },
-          right: { sm: 0, lg: '12rem' },
+          right: { sm: 0, lg: '12rem', desktop: '16.5rem' },
           top: { sm: 0 },
         }}
       />
@@ -189,7 +193,7 @@ const Hero = () => {
         </Typography>
         <Button
           sx={{
-            mb: { xs: '8rem', sm: '6rem', lg: '12rem' },
+            mb: { xs: '8rem', sm: '6rem', lg: '12rem', desktop: '22rem' },
           }}>
           Contact me
         </Button>

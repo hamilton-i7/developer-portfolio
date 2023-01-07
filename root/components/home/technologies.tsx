@@ -18,7 +18,14 @@ const Technologies = () => {
 
   return (
     <Box
-      sx={{ padding: { xs: '0 1.6rem', sm: '0 3.2rem', lg: '0 12rem' } }}
+      sx={{
+        padding: {
+          xs: '0 1.6rem',
+          sm: '0 3.2rem',
+          lg: '0 12rem',
+          desktop: '0 16.5rem',
+        },
+      }}
       component='section'>
       <Divider />
       <Grid

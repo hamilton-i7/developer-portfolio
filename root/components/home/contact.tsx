@@ -49,7 +49,12 @@ const Contact = () => {
       component='footer'
       sx={{
         background: theme => theme.palette.neutral.dark,
-        padding: { xs: '6rem 1.6rem', sm: '6rem 3.2rem', lg: '8.4rem 12rem' },
+        padding: {
+          xs: '6rem 1.6rem',
+          sm: '6rem 3.2rem',
+          lg: '8.4rem 12rem',
+          desktop: '8.4rem 16.5rem',
+        },
         position: 'relative',
         alignItems: 'center',
       }}>
@@ -62,7 +67,7 @@ const Contact = () => {
           flexDirection: { xs: 'column', lg: 'row' },
           width: { sm: '44.5rem', lg: '100%' },
         }}>
-        <Stack sx={{ width: '44.5rem' }}>
+        <Box sx={{ width: { sm: '44.5rem' } }}>
           <Typography
             variant='h1'
             component='h2'
@@ -75,12 +80,12 @@ const Contact = () => {
             I would love to hear about your project and how I could help. Please
             fill in the form, and I'll get back to you as soon as possible.
           </Typography>
-        </Stack>
+        </Box>
 
         <Stack
           sx={{
             alignItems: 'end',
-            width: { lg: '44.5rem' },
+            width: { xs: '100%', lg: '44.5rem' },
           }}>
           <TextField placeholder='NAME' sx={{ mb: '3.2rem' }} />
           <TextField

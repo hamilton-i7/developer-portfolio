@@ -28,6 +28,7 @@ const Navbar = ({ sx }: StackProps) => {
         spacing={3}
         sx={{
           mt: { xs: '2rem', sm: 0 },
+          px: '2rem',
           '& > .MuiSvgIcon-root': {
             cursor: 'pointer',
             color: theme => theme.palette.common.white,

@@ -36,7 +36,7 @@ export default function Home() {
             left: { xs: '50%', sm: 0 },
             transform: { xs: 'translateX(-50%)', sm: 'none' },
             width: '100%',
-            px: { sm: '3rem', lg: '12rem' },
+            px: { sm: '3rem', lg: '12rem', desktop: '16.5rem' },
           }}
         />
         <Hero />
