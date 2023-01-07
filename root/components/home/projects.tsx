@@ -84,7 +84,10 @@ const Projects = () => {
         </Typography>
         <Button>Contact me</Button>
       </Stack>
-      <Grid container spacing={5}>
+      <Grid
+        container
+        columnSpacing={{ xs: 5, tablet: 3 }}
+        rowSpacing={{ xs: 5, tablet: 7.5 }}>
         {projects.map((project, index) => (
           <Grid key={index} item xs={12} tablet={6}>
             <Project project={project} useLargeImage={matchesSmallScreen} />

@@ -3,9 +3,11 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import React from 'react'
-import { useSmallScreenMatcher } from '../../utils/responsive'
+import {
+  useSmallScreenMatcher,
+  useTabletScreenMatcher,
+} from '../../utils/responsive'
 import Button from '../common/button'
-import Divider from '../common/divider'
 
 const PatternRings = () => {
   return (
@@ -43,6 +45,66 @@ const PatternCircle = () => {
   )
 }
 
+const Heading = () => {
+  const theme = useTheme()
+  const matchesTabletScreen = useTabletScreenMatcher(theme)
+
+  const text = matchesTabletScreen ? (
+    <>
+      Nice to <br />
+      meet you! I'm <br />
+      <Box
+        component='span'
+        sx={{
+          position: 'relative',
+          '::after': {
+            content: "''",
+            height: '0.4rem',
+            width: { xs: '22.5rem', sm: '40.2rem' },
+            background: theme => theme.palette.primary.main,
+            position: 'absolute',
+            bottom: '0.25rem',
+            left: 0,
+          },
+        }}>
+        Adam Keyes.
+      </Box>
+    </>
+  ) : (
+    <>
+      Nice to meet you! <br />
+      I'm{' '}
+      <Box
+        component='span'
+        sx={{
+          position: 'relative',
+          '::after': {
+            content: "''",
+            height: '0.4rem',
+            width: '22.5rem',
+            background: theme => theme.palette.primary.main,
+            position: 'absolute',
+            bottom: '0.25rem',
+            left: 0,
+          },
+        }}>
+        Adam Keyes.
+      </Box>
+    </>
+  )
+
+  return (
+    <Typography
+      variant='h1'
+      sx={{
+        mb: { xs: '2.4rem', sm: '6rem' },
+        mt: { sm: '15rem' },
+      }}>
+      {text}
+    </Typography>
+  )
+}
+
 const Hero = () => {
   const theme = useTheme()
   const matchesSmallScreen = useSmallScreenMatcher(theme)
@@ -67,7 +129,7 @@ const Hero = () => {
         }
         alt='Picture of Adam Keyes'
         sx={{
-          width: { xs: '17.4rem', sm: '24rem' },
+          width: { xs: '17.4rem', sm: '24rem', tablet: '32.2rem' },
           mb: '4rem',
           zIndex: 1,
           position: { sm: 'absolute' },
@@ -80,31 +142,7 @@ const Hero = () => {
           width: { sm: '33rem', tablet: '44.5rem' },
           zIndex: { sm: 2 },
         }}>
-        <Typography
-          variant='h1'
-          sx={{
-            mb: { xs: '2.4rem', sm: '6rem' },
-            mt: { sm: '15rem' },
-          }}>
-          Nice to meet you! <br />
-          I'm{' '}
-          <Box
-            component='span'
-            sx={{
-              position: 'relative',
-              '::after': {
-                content: "''",
-                height: '0.4rem',
-                width: '22.5rem',
-                background: theme => theme.palette.primary.main,
-                position: 'absolute',
-                bottom: '0.25rem',
-                left: 0,
-              },
-            }}>
-            Adam Keyes.
-          </Box>
-        </Typography>
+        <Heading />
         <Typography
           variant='body1'
           sx={{
