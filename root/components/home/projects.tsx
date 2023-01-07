@@ -111,7 +111,7 @@ const Projects = () => {
         <Typography variant='h1' component='h2'>
           Projects
         </Typography>
-        <Button>Contact me</Button>
+        <Button href='#contact'>Contact me</Button>
       </Stack>
       <Grid
         container

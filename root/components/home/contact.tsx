@@ -47,6 +47,7 @@ const Contact = () => {
   return (
     <Stack
       component='footer'
+      id='contact'
       sx={{
         background: theme => theme.palette.neutral.dark,
         padding: {

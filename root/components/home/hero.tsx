@@ -192,6 +192,7 @@ const Hero = () => {
           accessible web apps that users love.
         </Typography>
         <Button
+          href='#contact'
           sx={{
             mb: { xs: '8rem', sm: '6rem', lg: '12rem', desktop: '22rem' },
           }}>
