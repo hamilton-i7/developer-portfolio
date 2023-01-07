@@ -32,9 +32,11 @@ export default function Home() {
         <Navbar
           sx={{
             position: 'absolute',
-            top: '2rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
+            top: { xs: '2rem', sm: '3rem' },
+            left: { xs: '50%', sm: 0 },
+            transform: { xs: 'translateX(-50%)', sm: 'none' },
+            width: '100%',
+            px: { sm: '3rem' },
           }}
         />
         <Hero />

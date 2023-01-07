@@ -14,6 +14,8 @@ const Navbar = ({ sx }: StackProps) => {
       sx={{
         alignItems: 'center',
         zIndex: 1_000,
+        flexDirection: { xs: 'column', sm: 'row' },
+        justifyContent: { sm: 'space-between' },
         ...sx,
       }}>
       <Link href='#'>
@@ -25,7 +27,7 @@ const Navbar = ({ sx }: StackProps) => {
         direction='row'
         spacing={3}
         sx={{
-          mt: '2rem',
+          mt: { xs: '2rem', sm: 0 },
           '& > .MuiSvgIcon-root': {
             cursor: 'pointer',
             color: theme => theme.palette.common.white,
