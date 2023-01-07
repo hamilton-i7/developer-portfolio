@@ -102,6 +102,7 @@ const Projects = () => {
       }}>
       <PatternRings />
       <Stack
+        component='header'
         direction='row'
         sx={{
           alignItems: 'center',
@@ -118,7 +119,7 @@ const Projects = () => {
         columnSpacing={{ xs: 5, tablet: 3, lg: 3.75 }}
         rowSpacing={{ xs: 5, tablet: 7.5, lg: 8.75 }}>
         {projects.map((project, index) => (
-          <Grid key={index} item xs={12} tablet={6} xl={4}>
+          <Grid component='article' key={index} item xs={12} tablet={6} xl={4}>
             {matchesLargeScreen ? (
               <ProjectDesktop project={project} />
             ) : (

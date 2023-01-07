@@ -37,7 +37,7 @@ const Technologies = () => {
           padding: { xs: '4rem 0', sm: '6rem 0 0', lg: '7.2rem 0 0' },
         }}>
         {technologies.map((technology, index) => (
-          <Grid key={index} item xs={12} sm={6} lg={4}>
+          <Grid component='article' key={index} item xs={12} sm={6} lg={4}>
             <Stack>
               <Typography variant='h2' component='h3'>
                 {technology.name}

@@ -68,7 +68,7 @@ const Contact = () => {
           flexDirection: { xs: 'column', lg: 'row' },
           width: { sm: '44.5rem', lg: '100%' },
         }}>
-        <Box sx={{ width: { sm: '44.5rem' } }}>
+        <Box component='aside' sx={{ width: { sm: '44.5rem' } }}>
           <Typography
             variant='h1'
             component='h2'
@@ -84,6 +84,7 @@ const Contact = () => {
         </Box>
 
         <Stack
+          component='form'
           sx={{
             alignItems: 'end',
             width: { xs: '100%', lg: '44.5rem' },
