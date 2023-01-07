@@ -72,6 +72,7 @@ const typography: TypographyOptions = {
     fontWeight: 500,
     lineHeight: '1.6rem',
     letterSpacing: '-0.017rem',
+    textTransform: 'none',
   },
 }
 
