@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography'
 import Button from '../common/button'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
+import { useTheme } from '@mui/material'
+import { useSmallScreenMatcher } from '../../utils/responsive'
 
 const PatternRings = () => {
   return (
@@ -25,12 +27,17 @@ const PatternRings = () => {
   )
 }
 
-const Project = ({ project }: { project: IProject }) => {
+type ProjectProps = {
+  project: IProject
+  useLargeImage: boolean
+}
+
+const Project = ({ project, useLargeImage }: ProjectProps) => {
   return (
     <Stack>
       <Box
         component='img'
-        src={project.imgSrc.small}
+        src={useLargeImage ? project.imgSrc.large : project.imgSrc.small}
         alt={project.name}
         sx={{ mb: '2rem' }}
       />
@@ -54,11 +61,14 @@ const Projects = () => {
   const { projects }: { projects: IProject[] } = JSON.parse(
     JSON.stringify(collections),
   )
+  const theme = useTheme()
+  const matchesSmallScreen = useSmallScreenMatcher(theme)
+
   return (
     <Stack
       component='main'
       sx={{
-        padding: '8rem 1.6rem',
+        padding: { xs: '8rem 1.6rem', sm: '10rem 3.2rem' },
         position: 'relative',
       }}>
       <PatternRings />
@@ -67,7 +77,7 @@ const Projects = () => {
         sx={{
           alignItems: 'center',
           justifyContent: 'space-between',
-          mb: '4rem',
+          mb: { xs: '4rem', sm: '6rem' },
         }}>
         <Typography variant='h1' component='h2'>
           Projects
@@ -77,7 +87,7 @@ const Projects = () => {
       <Grid container spacing={5}>
         {projects.map((project, index) => (
           <Grid key={index} item xs={12} tablet={6}>
-            <Project project={project} />
+            <Project project={project} useLargeImage={matchesSmallScreen} />
           </Grid>
         ))}
       </Grid>

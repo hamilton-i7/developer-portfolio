@@ -53,7 +53,7 @@ const Hero = () => {
       sx={{
         alignItems: { xs: 'center', sm: 'start' },
         textAlign: { xs: 'center', sm: 'left' },
-        padding: '0 1.6rem',
+        padding: { xs: '0 1.6rem', sm: '0 3.2rem' },
         overflowX: 'hidden',
       }}>
       <PatternRings />
