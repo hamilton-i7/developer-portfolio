@@ -17,13 +17,15 @@ const Technologies = () => {
   const matchesSmallScreen = useSmallScreenMatcher(theme)
 
   return (
-    <Box sx={{ padding: '0 1.6rem' }} component='section'>
+    <Box
+      sx={{ padding: { xs: '0 1.6rem', sm: '0 3.2rem' } }}
+      component='section'>
       <Divider />
       <Grid
         container
         spacing={3}
         sx={{
-          textAlign: 'center',
+          textAlign: { xs: 'center', sm: 'left' },
           padding: { xs: '4rem 0', sm: '6rem 0 0' },
         }}>
         {technologies.map((technology, index) => (
