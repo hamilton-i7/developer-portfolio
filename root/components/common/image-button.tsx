@@ -77,7 +77,7 @@ const ImageButton = ({ img, component = 'div' }: ImageButtonProps) => {
   return (
     <ComplexButton
       component={component}
-      role='none'
+      role='presentation'
       aria-label='View project or view code'
       focusRipple
       style={{
