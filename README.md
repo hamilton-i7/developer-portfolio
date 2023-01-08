@@ -1,6 +1,6 @@
 # Frontend Mentor - Single-page developer portfolio solution
 
-![Design preview for the Single-page developer portfolio coding challenge](./preview.jpg?)
+![Design preview for the Single-page developer portfolio coding challenge](./preview.jpg)
 
 ## Table of contents
 
@@ -35,7 +35,6 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- Material UI
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
