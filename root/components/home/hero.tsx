@@ -55,7 +55,7 @@ const Heading = () => {
     <>
       Nice to meet you!
       <br />
-      I'm{' '}
+      I&apos;m{' '}
       <Box
         component='span'
         sx={{
@@ -76,7 +76,7 @@ const Heading = () => {
   ) : matchesTabletScreen ? (
     <>
       Nice to <br />
-      meet you! I'm <br />
+      meet you! I&apos;m <br />
       <Box
         component='span'
         sx={{
@@ -97,7 +97,7 @@ const Heading = () => {
   ) : (
     <>
       Nice to meet you! <br />
-      I'm{' '}
+      I&apos;m{' '}
       <Box
         component='span'
         sx={{
@@ -188,8 +188,8 @@ const Hero = () => {
             mb: { xs: '2.4rem', sm: '3.4rem', lg: '6.6rem' },
             width: { lg: '44.5rem' },
           }}>
-          Based in the UK, I'm a front-end developer passionate about building
-          accessible web apps that users love.
+          Based in the UK, I&apos;m a front-end developer passionate about
+          building accessible web apps that users love.
         </Typography>
         <Button
           href='#contact'

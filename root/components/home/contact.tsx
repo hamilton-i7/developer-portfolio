@@ -79,7 +79,7 @@ const Contact = () => {
             variant='body1'
             sx={{ color: theme => theme.palette.neutral.main, mb: '5rem' }}>
             I would love to hear about your project and how I could help. Please
-            fill in the form, and I'll get back to you as soon as possible.
+            fill in the form, and I&apos;ll get back to you as soon as possible.
           </Typography>
         </Box>
 
