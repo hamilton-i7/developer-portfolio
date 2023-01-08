@@ -90,7 +90,7 @@ const Projects = () => {
 
   return (
     <Stack
-      component='main'
+      component='section'
       sx={{
         padding: {
           xs: '8rem 1.6rem',

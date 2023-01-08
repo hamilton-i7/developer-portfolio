@@ -68,7 +68,7 @@ const Contact = () => {
           flexDirection: { xs: 'column', lg: 'row' },
           width: { sm: '44.5rem', lg: '100%' },
         }}>
-        <Box component='aside' sx={{ width: { sm: '44.5rem' } }}>
+        <Box sx={{ width: { sm: '44.5rem' } }}>
           <Typography
             variant='h1'
             component='h2'
@@ -89,12 +89,17 @@ const Contact = () => {
             alignItems: 'end',
             width: { xs: '100%', lg: '44.5rem' },
           }}>
-          <TextField placeholder='NAME' sx={{ mb: '3.2rem' }} />
+          <TextField
+            placeholder='NAME'
+            ariaLabel='name'
+            sx={{ mb: '3.2rem' }}
+          />
           <TextField
             placeholder='EMAIL'
             type='email'
             sx={{ mb: '3.2rem' }}
             error={isError}
+            ariaLabel='email'
             helperText={
               isError ? (
                 <Typography variant='overline'>
@@ -111,6 +116,7 @@ const Contact = () => {
             placeholder='MESSAGE'
             multiline
             minRows={4}
+            ariaLabel='message'
             sx={{ mb: '3.2rem' }}
           />
           <Button
@@ -121,7 +127,7 @@ const Contact = () => {
         </Stack>
       </Stack>
       <Divider flexItem sx={{ mb: '4rem' }} />
-      <Navbar sx={{ width: '100%' }} />
+      <Navbar aria-label='Bottom navigation bar' sx={{ width: '100%' }} />
     </Stack>
   )
 }

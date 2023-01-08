@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import SvgIcon from '@mui/material/SvgIcon'
 
-const Navbar = ({ sx }: StackProps) => {
+const Navbar = ({ sx, ...props }: StackProps) => {
   return (
     <Stack
       component='nav'
@@ -17,7 +17,8 @@ const Navbar = ({ sx }: StackProps) => {
         flexDirection: { xs: 'column', sm: 'row' },
         justifyContent: { sm: 'space-between' },
         ...sx,
-      }}>
+      }}
+      {...props}>
       <Link href='#'>
         <Typography variant='h3' component='p'>
           adamkeyes

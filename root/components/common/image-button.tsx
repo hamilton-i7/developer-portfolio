@@ -32,7 +32,7 @@ const ComplexButton = styled(ButtonBase)(({ theme }) => ({
       display: 'block',
     },
   },
-}))
+})) as typeof ButtonBase
 
 const ImageSrc = styled('span')({
   position: 'absolute',
@@ -70,11 +70,13 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
 
 type ImageButtonProps = {
   img: string
+  component?: React.ElementType
 }
 
-const ImageButton = ({ img }: ImageButtonProps) => {
+const ImageButton = ({ img, component = 'div' }: ImageButtonProps) => {
   return (
     <ComplexButton
+      component={component}
       focusRipple
       style={{
         width: '100%',
@@ -85,10 +87,8 @@ const ImageButton = ({ img }: ImageButtonProps) => {
       <ImageSrc style={{ backgroundImage: `url(${img})` }} />
       <ImageBackdrop className='MuiImageBackdrop-root' />
       <Image>
-        <Button component='div' sx={{ mb: '4.8rem' }}>
-          View Project
-        </Button>
-        <Button component='div'>View Code</Button>
+        <Button sx={{ mb: '4.8rem' }}>View Project</Button>
+        <Button>View Code</Button>
       </Image>
     </ComplexButton>
   )

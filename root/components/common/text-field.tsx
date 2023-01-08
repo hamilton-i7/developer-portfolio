@@ -6,6 +6,7 @@ import InputAdornment from '@mui/material/InputAdornment'
 
 type TextFieldProps = MuiTextFieldProps & {
   endIcon?: React.ReactNode
+  ariaLabel?: string
 }
 
 const TextField = ({
@@ -14,6 +15,7 @@ const TextField = ({
   error,
   endIcon,
   sx,
+  ariaLabel,
   ...props
 }: TextFieldProps) => {
   return (
@@ -24,6 +26,7 @@ const TextField = ({
       helperText={helperText}
       InputProps={{
         endAdornment: <InputAdornment position='end'>{endIcon}</InputAdornment>,
+        'aria-label': ariaLabel,
       }}
       sx={{
         ...sx,

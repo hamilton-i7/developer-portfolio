@@ -25,8 +25,7 @@ const Technologies = () => {
           lg: '0 12rem',
           desktop: '0 16.5rem',
         },
-      }}
-      component='section'>
+      }}>
       <Divider />
       <Grid
         container

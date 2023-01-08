@@ -30,6 +30,7 @@ export default function Home() {
           color: theme => theme.palette.common.white,
         }}>
         <Navbar
+          aria-label='Top navigation bar'
           sx={{
             position: 'absolute',
             top: { xs: '2rem', sm: '3rem', lg: '4rem' },
@@ -40,8 +41,10 @@ export default function Home() {
           }}
         />
         <Hero />
-        <Technologies />
-        <Projects />
+        <main>
+          <Technologies />
+          <Projects />
+        </main>
         <Contact />
       </Box>
     </>
