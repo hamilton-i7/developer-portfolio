@@ -26,6 +26,8 @@ const TextField = ({
       helperText={helperText}
       InputProps={{
         endAdornment: <InputAdornment position='end'>{endIcon}</InputAdornment>,
+      }}
+      inputProps={{
         'aria-label': ariaLabel,
       }}
       sx={{
