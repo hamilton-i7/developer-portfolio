@@ -35,7 +35,6 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- Material UI
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
